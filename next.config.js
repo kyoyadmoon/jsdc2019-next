@@ -1,5 +1,8 @@
+const config = require('./config');
+
 module.exports = {
-  // some configuration
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/jsdc2019-next' : '',
-  // another configuration
-}
+  assetPrefix: config.assetPrefix,
+  publicRuntimeConfig: {
+    assetPrefix: config.assetPrefix,
+  },
+};

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+
 import Link from './Link';
+import Img from './Img';
 
 const LINKS = [
   { href: '/', name: '首頁' },
@@ -44,7 +46,7 @@ const StyledLink = styled(Link)`
 const Nav = () => {
   return (
     <Main>
-      <Logo href='/'><img src='/static/images/logo.svg' width='100'/></Logo>
+      <Logo href='/'><Img src='/static/images/logo.svg' width='100'/></Logo>
       <LinkList>
         {LINKS.map((link, i) => (
           <StyledLink key={i} href={link.href}>{link.name}</StyledLink>
