@@ -1,5 +1,6 @@
 import App, { Container } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
+import Nav from '~/components/nav';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -28,10 +29,10 @@ class Main extends App {
   // }
 
   render() {
-    const { Component, pageProps } = this.props;
-
+    const { Component, pageProps, router } = this.props;
     return (
       <Container>
+        <Nav route={router.route} />
         <Component {...pageProps} />
         <GlobalStyle/>
       </Container>
