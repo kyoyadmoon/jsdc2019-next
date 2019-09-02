@@ -37,19 +37,19 @@ const StyledLink = styled(Link)`
   line-height: 60px;
   transition: color .2s ease-in-out;
   word-break: keep-all;
-
+  color: ${props => props.active ? '#ffc825' : '#FFF'};
   &:hover {
     color: #ffc825;
   }
 `;
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <Main>
-      <Logo href='/'><Img src='/static/images/logo.svg' width='100'/></Logo>
+      <Logo href='/'><Img src='/static/images/logo.svg' width='100' /></Logo>
       <LinkList>
         {LINKS.map((link, i) => (
-          <StyledLink key={i} href={link.href}>{link.name}</StyledLink>
+          <StyledLink active={props.route === link.href} key={i} href={link.href}>{link.name}</StyledLink>
         ))}
       </LinkList>
     </Main>
