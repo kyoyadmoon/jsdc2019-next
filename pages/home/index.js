@@ -40,9 +40,7 @@ const LogoImg = styled.img`
 `;
 
 const Title = styled.p`
-  font-family: "Open Sans", sans-serif;
   font-size: 25px;
-  color: #e4e4e4;
   line-height: 25px;
   text-align: center;
   text-size-adjust: 100%;
@@ -51,13 +49,12 @@ const Title = styled.p`
 `;
 
 const YellowHighlight = styled.span`
-  color: #ffc825;
+  color: ${props => props.theme.colors.primary};
   font-size: 16px;
   line-height: 35px;
 `;
 
 const EventDescription = styled.span`
-  color: #e4e4e4;
   font-size: 16px;
   line-height: 35px;
 `;
@@ -70,14 +67,14 @@ const Button = styled.button`
   margin-top: 50px;
   width: 50%;
   height: 44px;
-  background-color: rgb(34, 34, 34);
-  color: #e4e4e4;
+  background-color: ${props => props.theme.colors.bg};
+  color: ${props => props.theme.colors.white};
   border-radius: 5px;
   letter-spacing: 0.125em;
   font-weight: 400;
   &:hover {
-    background-color: #e4e4e4;
-    color: rgb(34, 34, 34);
+    background-color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.bg};
     transition: color .2s ease-in-out,border-color .2s ease-in-out;
   }
 `;
