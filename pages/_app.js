@@ -35,9 +35,9 @@ class Main extends App {
     return (
       <ThemeProvider theme={theme}>
         <Container>
+          <GlobalStyle />
           <Nav route={router.route} />
           <Component {...pageProps} />
-          <GlobalStyle />
         </Container>
       </ThemeProvider>
     );
