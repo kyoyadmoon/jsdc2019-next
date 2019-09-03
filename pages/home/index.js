@@ -1,20 +1,30 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export default () => (
   <Container>
-    <LogoImgBox>
-      <LogoImg src="https://2019.jsdc.tw/images/official/jsdcmain-line.png" />
-      {/* <LogoImg animation src="https://2019.jsdc.tw/images/official/jsdcmain.png" /> */}
-    </LogoImgBox>
+    <LogoContainer>
+      <InvisibleLogo >
+        <LogoImg src="https://2019.jsdc.tw/images/official/jsdcmain-line.png" />
+      </InvisibleLogo>
+      <FadeOutLogo>
+        <LogoImg src="https://2019.jsdc.tw/images/official/jsdcmain-line.png" />
+      </FadeOutLogo>
+      <FadeInLogo>
+        <LogoImg src="https://2019.jsdc.tw/images/official/jsdcmain.png" />
+      </FadeInLogo>
+    </LogoContainer>
     <Title>The 8th JavaScript Developer Annual Conference in Taiwan</Title>
+
     <HighlightSpan>JSDC 2019活動</HighlightSpan>
     <HighlightSpan>2019/9/28 (六) 技術工作坊：「 JavaScript 新技術的入門與導入」</HighlightSpan>
     <HighlightSpan>2019/10/26 (六) 主年會：「 JavaScript 穩定之後，然後呢？」</HighlightSpan>
+
     <Division />
+
     <DescriptionSpan>JavaScript 近年從 ES6 的出世到前端框架的競逐，帶動了一連串的革命，</DescriptionSpan>
     <DescriptionSpan>也同時在後端、行動裝置，甚至是 IoT，機器學習等領域大放異彩。</DescriptionSpan>
-    <DescriptionSpan>如名言「任何可用 JavaScript 編寫的應用程序，最終將用 JavaScript 編寫」
-      </DescriptionSpan>
+    <DescriptionSpan>如名言「任何可用 JavaScript 編寫的應用程序，最終將用 JavaScript 編寫」</DescriptionSpan>
+
     <HighlightSpan>我們期待 JavaScript 的未來！</HighlightSpan>
     <Button>BUY NOW</Button>
   </Container>
@@ -28,15 +38,64 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const LogoImgBox = styled.div`
-  margin: auto;
-  max-width: 1440px;
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 `;
 
 const LogoImg = styled.img`
   max-width: 1440px;
   width: 100%;
   height: auto;
+`;
+
+const InvisibleLogo = styled.div`
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: block;
+  max-width: 1440px;
+`;
+
+const FadeOutLogo = styled.div`
+  opacity: 0;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  max-width: 1440px;
+  animation: ${fadeOut} 2s ease-out;
+`;
+
+const FadeInLogo = styled.div`
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  max-width: 1440px;
+  animation: ${fadeIn} 2s linear;
 `;
 
 const Title = styled.p`
