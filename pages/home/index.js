@@ -7,15 +7,15 @@ export default () => (
       {/* <LogoImg animation src="https://2019.jsdc.tw/images/official/jsdcmain.png" /> */}
     </LogoImgBox>
     <Title>The 8th JavaScript Developer Annual Conference in Taiwan</Title>
-    <YellowHighlight>JSDC 2019活動</YellowHighlight>
-    <YellowHighlight>2019/9/28 (六) 技術工作坊：「 JavaScript 新技術的入門與導入」</YellowHighlight>
-    <YellowHighlight>2019/10/26 (六) 主年會：「 JavaScript 穩定之後，然後呢？」</YellowHighlight>
+    <HighlightSpan>JSDC 2019活動</HighlightSpan>
+    <HighlightSpan>2019/9/28 (六) 技術工作坊：「 JavaScript 新技術的入門與導入」</HighlightSpan>
+    <HighlightSpan>2019/10/26 (六) 主年會：「 JavaScript 穩定之後，然後呢？」</HighlightSpan>
     <Division />
-    <EventDescription>JavaScript 近年從 ES6 的出世到前端框架的競逐，帶動了一連串的革命，</EventDescription>
-    <EventDescription>也同時在後端、行動裝置，甚至是 IoT，機器學習等領域大放異彩。</EventDescription>
-    <EventDescription>如名言「任何可用 JavaScript 編寫的應用程序，最終將用 JavaScript 編寫」
-      </EventDescription>
-    <YellowHighlight>我們期待 JavaScript 的未來！</YellowHighlight>
+    <DescriptionSpan>JavaScript 近年從 ES6 的出世到前端框架的競逐，帶動了一連串的革命，</DescriptionSpan>
+    <DescriptionSpan>也同時在後端、行動裝置，甚至是 IoT，機器學習等領域大放異彩。</DescriptionSpan>
+    <DescriptionSpan>如名言「任何可用 JavaScript 編寫的應用程序，最終將用 JavaScript 編寫」
+      </DescriptionSpan>
+    <HighlightSpan>我們期待 JavaScript 的未來！</HighlightSpan>
     <Button>BUY NOW</Button>
   </Container>
 );
@@ -48,13 +48,13 @@ const Title = styled.p`
   margin-top: 0;
 `;
 
-const YellowHighlight = styled.span`
+const HighlightSpan = styled.span`
   color: ${props => props.theme.colors.primary};
   font-size: 16px;
   line-height: 35px;
 `;
 
-const EventDescription = styled.span`
+const DescriptionSpan = styled.span`
   font-size: 16px;
   line-height: 35px;
 `;
