@@ -3,6 +3,11 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended'
   ],
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
   parser: 'babel-eslint',
   root: true,
   parserOptions: {
@@ -14,7 +19,7 @@ module.exports = {
     'react/jsx-no-bind': 0,
     'no-use-before-define': 0,
     quotes: 0,
-    'babel/quotes': [4, 'single'],
+    'babel/quotes': [1, 'single'],
     semi: ['ERROR', 'always'],
     'space-before-function-paren': [2, {
       anonymous: 'never',
@@ -32,12 +37,12 @@ module.exports = {
       'error', 'always', {
         arraysInObjects: true,
         objectsInObjects: true
-    }],
+      }],
     'array-bracket-spacing': [
       'error', 'always', {
         arraysInArrays: false,
         objectsInArrays: false
-    }],
+      }],
     'react/display-name': 0,
     'react/prop-types': 0,
   },
