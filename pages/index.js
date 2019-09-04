@@ -1,5 +1,3 @@
 import Home from '../modules/home/Home';
 
-export default () => (
-  <Home/>
-);
+export default () => <Home />;

@@ -1,6 +1,5 @@
+import About from '../modules/about/About';
 
 export default class extends React.Component {
-  render = () => (
-    <div>yoooo</div>
-  )
+    render = () => <About />;
 }

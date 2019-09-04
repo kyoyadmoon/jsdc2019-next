@@ -1,7 +1,7 @@
-import Nav from '~/components/nav';
+// import Nav from '~/components/nav';
 
-export default () => (
-  <>
-    <Nav/>
-  </>
-);
+const Home = () => {
+    return <div>hihi</div>;
+};
+
+export default Home;

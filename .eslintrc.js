@@ -14,7 +14,7 @@ module.exports = {
     'react/jsx-no-bind': 0,
     'no-use-before-define': 0,
     quotes: 0,
-    'babel/quotes': [2, 'single'],
+    'babel/quotes': [4, 'single'],
     semi: ['ERROR', 'always'],
     'space-before-function-paren': [2, {
       anonymous: 'never',
