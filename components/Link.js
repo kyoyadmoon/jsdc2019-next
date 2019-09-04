@@ -15,11 +15,11 @@ const HyperLink = styled.a`
 `;
 
 export default ({ router, className, href, children }) => {
-    return (
-        <Link href={href}>
-            <HyperLink className={className} router={router}>
-                {children}
-            </HyperLink>
-        </Link>
-    );
+  return (
+    <Link href={href}>
+      <HyperLink className={className} router={router}>
+        {children}
+      </HyperLink>
+    </Link>
+  );
 };
