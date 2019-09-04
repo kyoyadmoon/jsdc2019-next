@@ -14,6 +14,7 @@ module.exports = {
     ecmaVersion: 8
   },
   rules: {
+    "indent": ["error", 2],
     'react/jsx-filename-extension': 0,
     'no-extra-parens': 0,
     'react/jsx-no-bind': 0,
