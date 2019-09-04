@@ -20,7 +20,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
                 __html: `function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'tw'},
-    'google_translate_element');}`
+    'google_translate_element');}`,
             }}
         />
     );

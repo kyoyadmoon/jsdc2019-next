@@ -1,15 +1,16 @@
 import App, { Container } from 'next/app';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Nav from '~/components/nav';
+import theme from '~/config/styledComponentsTheme';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Open Sans', sans-serif;
-    background: #222;
-    
+    font-family: ${theme.font.fontFamily};
+    background: ${theme.colors.bg};
     width: 100%;
     height: 100%;
-    font-size: 14px;
+    font-size: ${theme.font.fontSize};
+    color: ${theme.colors.white};
   }
 `;
 
@@ -29,17 +30,18 @@ class Main extends App {
     //   return { pageProps }
     // }
 
-    render() {
-        const { Component, pageProps } = this.props;
-        console.log(this.props);
-        return (
-            <Container>
-                <Nav router={this.props.router} />
-                <Component {...pageProps} />
-                <GlobalStyle />
-            </Container>
-        );
-    }
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <ThemeProvider theme={theme}>
+        <Container>
+          <GlobalStyle />
+          <Nav />
+          <Component {...pageProps} />
+        </Container>
+      </ThemeProvider>
+    );
+  }
 }
 
 export default Main;

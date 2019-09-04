@@ -6,5 +6,5 @@ export const LINKS = [
     { href: '/agenda', name: '議程' },
     { href: '/sponsors', name: '合作夥伴' },
     { href: '/team', name: '工作團隊' },
-    { href: '/conduct', name: '行為準則' }
+    { href: '/conduct', name: '行為準則' },
 ];
