@@ -8,3 +8,14 @@ export const LINKS = [
   { href: '/team', name: '工作團隊' },
   { href: '/conduct', name: '行為準則' },
 ];
+
+export const ACTIVITIES = {
+  CONFERENCE: {
+    key: 'CONFERENCE',
+    name: '主年會',
+  },
+  WORKSHOP: {
+    key: 'WORKSHOP',
+    name: '工作坊',
+  },
+};
