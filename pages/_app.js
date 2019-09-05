@@ -1,6 +1,7 @@
 import App, { Container } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import Nav from '~/components/nav';
+import Nav from '~/components/Nav';
+import Footer from '~/components/Footer';
 import theme from '~/config/styledComponentsTheme';
 
 const GlobalStyle = createGlobalStyle`
@@ -38,6 +39,7 @@ class Main extends App {
           <GlobalStyle />
           <Nav />
           <Component {...pageProps} />
+          <Footer />
         </Container>
       </ThemeProvider>
     );
