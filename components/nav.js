@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 import HyperLink from './Link';
 import { LINKS } from '../constant';
-import { useRouter } from 'next/router';
 
 const Nav = () => {
-  const router = useRouter();
   return (
     <Main>
       <Logo href="/">
@@ -12,7 +10,7 @@ const Nav = () => {
       </Logo>
       <LinkList>
         {LINKS.map((link, i) => (
-          <HyperLink key={i} href={link.href} router={router}>
+          <HyperLink key={i} href={link.href}>
             {link.name}
           </HyperLink>
         ))}
@@ -28,18 +26,21 @@ const Main = styled.nav`
     position: relative;
     align-items: center;
     flex-direction: row;
-    height: 60px;
-    padding: 0 15px;
+    min-height: 50px;
+    height: 54px;
+    padding: 0px 15px;
+    padding-top: 5px;
     color: ${props => props.theme.colors.white};
 `;
 
 const LinkList = styled.div`
     display: flex;
-    margin-left: 7px;
+    margin-left: 22px;
 `;
 
 const Logo = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
 `;
