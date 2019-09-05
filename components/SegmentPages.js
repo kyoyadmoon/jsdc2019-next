@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 import { ACTIVITIES } from '~/constant';
 
 const { CONFERENCE } = ACTIVITIES;
@@ -13,7 +15,7 @@ export function useSegment() {
   };
 }
 
-export default ({ subPages, activeTarget, setActiveTarget }) => {
+export default function SegmentPages({ subPages, activeTarget, setActiveTarget }) {
 
   function renderSubContent() {
     return Object.keys(ACTIVITIES).map(key => {
@@ -49,6 +51,12 @@ export default ({ subPages, activeTarget, setActiveTarget }) => {
       {renderSubContent()}
     </>
   );
+}
+
+SegmentPages.propTypes = {
+  subPages: PropTypes.object.isRequired,
+  activeTarget: PropTypes.string.isRequired,
+  setActiveTarget: PropTypes.func.isRequired,
 };
 
 const SegmentButtonGroup = styled.div`
