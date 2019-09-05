@@ -4,6 +4,9 @@ import Header from '../shared/Header';
 import Title from '../shared/Title';
 import Description from '../shared/Description';
 import OrderList from '../shared/OrderList';
+import { ACTIVITIES } from '~/constant';
+
+const { CONFERENCE } = ACTIVITIES;
 
 const Container = styled.div`
   display: flex;
@@ -14,8 +17,8 @@ const Container = styled.div`
 export default () => {
   return (
     <Container>
-      <Header date="10/26" title="JavaScript 穩定之後，然後呢？" />
-      <PageTitle title="富邦國際會議中心" />
+      <Header date={CONFERENCE.date} title={CONFERENCE.title} />
+      <PageTitle title={CONFERENCE.location} />
 
       <Title>自行開車前往</Title>
       <Description>臺北市松山區敦化南路一段108號 B2F</Description>

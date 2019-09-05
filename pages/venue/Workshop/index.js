@@ -4,6 +4,9 @@ import Header from '../shared/Header';
 import Title from '../shared/Title';
 import Description from '../shared/Description';
 import OrderList from '../shared/OrderList';
+import { ACTIVITIES } from '~/constant';
+
+const { WORKSHOP } = ACTIVITIES;
 
 const Container = styled.div`
   display: flex;
@@ -14,8 +17,8 @@ const Container = styled.div`
 export default () => {
   return (
     <Container>
-      <Header date="9/28" title="JavaScript 新技術的入門與導入" />
-      <PageTitle title="M Space 共享空間" />
+      <Header date={WORKSHOP.date} title={WORKSHOP.title} />
+      <PageTitle title={WORKSHOP.location} />
       <Title>自行開車前往</Title>
       <Description>
         <OrderList>
