@@ -1,14 +1,22 @@
 import App, { Container } from 'next/app';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import Nav from '~/components/Nav';
+import Footer from '~/components/Footer';
+import theme from '~/config/styledComponentsTheme';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Open Sans', sans-serif;
-    background: #222;
+    font-family: ${theme.font.fontFamily};
+    background: ${theme.colors.bg};
     width: 100%;
     height: 100%;
-    font-size: 14px;
+    font-size: ${theme.font.fontSize};
+    color: ${theme.colors.white};
   }
+`;
+
+const PageContainer = styled.div`
+  min-height: 90vh;
 `;
 
 class Main extends App {
@@ -29,12 +37,17 @@ class Main extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-
     return (
-      <Container>
-        <Component {...pageProps} />
-        <GlobalStyle/>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Container>
+          <GlobalStyle />
+          <Nav />
+          <PageContainer>
+            <Component {...pageProps} />
+          </PageContainer>
+          <Footer />
+        </Container>
+      </ThemeProvider>
     );
   }
 }

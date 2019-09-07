@@ -14,12 +14,13 @@ module.exports = {
     ecmaVersion: 8
   },
   rules: {
+    "indent": ["error", 2],
     'react/jsx-filename-extension': 0,
     'no-extra-parens': 0,
     'react/jsx-no-bind': 0,
     'no-use-before-define': 0,
     quotes: 0,
-    'babel/quotes': [2, 'single'],
+    'babel/quotes': [1, 'single'],
     semi: ['ERROR', 'always'],
     'space-before-function-paren': [2, {
       anonymous: 'never',
@@ -37,12 +38,12 @@ module.exports = {
       'error', 'always', {
         arraysInObjects: true,
         objectsInObjects: true
-    }],
+      }],
     'array-bracket-spacing': [
       'error', 'always', {
         arraysInArrays: false,
         objectsInArrays: false
-    }],
+      }],
     'react/display-name': 0,
     'react/prop-types': 0,
   },
