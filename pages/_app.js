@@ -1,5 +1,5 @@
 import App, { Container } from 'next/app';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Nav from '~/components/Nav';
 import Footer from '~/components/Footer';
 import theme from '~/config/styledComponentsTheme';
@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${theme.font.fontSize};
     color: ${theme.colors.white};
   }
+`;
+
+const PageContainer = styled.div`
+  min-height: 90vh;
 `;
 
 class Main extends App {
@@ -38,7 +42,9 @@ class Main extends App {
         <Container>
           <GlobalStyle />
           <Nav />
-          <Component {...pageProps} />
+          <PageContainer>
+            <Component {...pageProps} />
+          </PageContainer>
           <Footer />
         </Container>
       </ThemeProvider>
