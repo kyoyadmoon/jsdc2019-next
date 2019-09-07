@@ -1,4 +1,4 @@
-export default function Job() {
+export default function Sponsor() {
   return (
     <div>
     </div>
