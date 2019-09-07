@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import HyperLink from './Link';
 import { LINKS } from '../constant';
+import Img from './Img';
 
 const Nav = () => {
   return (
     <Main>
       <Logo href="/">
-        <img src="/static/images/logo/logo.svg" width="100" />
+        <Img src="/static/images/logo/logo.svg" width="100" />
       </Logo>
       <LinkList>
         {LINKS.map((link, i) => (

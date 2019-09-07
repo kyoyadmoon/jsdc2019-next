@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import PageTitle from '~/components/PageTitle';
+import Img from '~/components/Img';
 
 const Container = styled.div`
   padding: 70px 15px;
@@ -20,7 +21,7 @@ const ImageBox = styled.div`
   width: 100%;
   padding: 15px;
 `;
-const Img = styled.img`
+const StyledImg = styled(Img)`
   width: 100%;
 `;
 
@@ -35,7 +36,7 @@ export default () => {
         JSDC 由 2011 年底開始，由三個台灣開發者社群共同發起，近年各式開發者社群蓬勃發展Front-End Developer、 Angular.tw、 ReactJS.tw 等新興社群⼀⼀成立，我們期許 JSDC 能成為每年網⾴技術開發者的中⾼階技術交流活動，整合來自獨立開發者、企業、組織及機構的科技力量，並致力於知識全球化，讓參與者重新認識 JavaScript。
       </Description>
       <ImageBox>
-        <Img src="https://2019.jsdc.tw/images/group.jpg" />
+        <StyledImg src="/static/images/group.jpg" />
       </ImageBox>
     </Container>
   );

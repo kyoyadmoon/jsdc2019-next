@@ -1,16 +1,17 @@
 import styled, { keyframes } from 'styled-components';
+import Img from '~/components/Img';
 
 export default () => (
   <Container>
     <LogoContainer>
       <InvisibleLogo >
-        <LogoImg src="https://2019.jsdc.tw/images/official/jsdcmain-line.png" />
+        <LogoImg src="/static/images/official/jsdcmain-line.png" />
       </InvisibleLogo>
       <FadeOutLogo>
-        <LogoImg src="https://2019.jsdc.tw/images/official/jsdcmain-line.png" />
+        <LogoImg src="/static/images/official/jsdcmain-line.png" />
       </FadeOutLogo>
       <FadeInLogo>
-        <LogoImg src="https://2019.jsdc.tw/images/official/jsdcmain.png" />
+        <LogoImg src="/static/images/official/jsdcmain.png" />
       </FadeInLogo>
     </LogoContainer>
     <Title>The 8th JavaScript Developer Annual Conference in Taiwan</Title>
@@ -67,7 +68,7 @@ const fadeOut = keyframes`
   }
 `;
 
-const LogoImg = styled.img`
+const LogoImg = styled(Img)`
   max-width: 1440px;
   width: 100%;
   height: auto;
