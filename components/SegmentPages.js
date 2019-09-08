@@ -35,8 +35,7 @@ export default function SegmentPages({ subPages, activeTarget, setActiveTarget }
         <SegmentButton
           key={key}
           onClick={() => setActiveTarget(key)}
-          active={activeTarget === key}
-        >
+          active={activeTarget === key}>
           {name}
         </SegmentButton>
       );

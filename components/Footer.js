@@ -4,7 +4,7 @@ export default () => {
   return (
     <Container>
       <Text>© 2019
-        <LinkText href="http://jsdc.tw" target="_blank">
+        <LinkText href='http://jsdc.tw' target='_blank'>
           JSDC.tw
         </LinkText>
       </Text>

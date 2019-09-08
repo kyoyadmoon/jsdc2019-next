@@ -6,8 +6,8 @@ import Img from './Img';
 const Nav = () => {
   return (
     <Main>
-      <Logo href="/">
-        <Img src="/static/images/logo/logo.svg" width="100" />
+      <Logo href='/'>
+        <Img src='/static/images/logo/logo.svg' width='100' />
       </Logo>
       <LinkList>
         {LINKS.map((link, i) => (

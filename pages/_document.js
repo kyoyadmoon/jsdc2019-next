@@ -21,21 +21,19 @@ class MyDocument extends Document {
           __html: `function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'tw'},
     'google_translate_element');}`,
-        }}
-      />
+        }}/>
     );
 
     render() {
       return (
         <Html>
           <Head />
-          <link rel="stylesheet" type="text/css" href="static/normalize.css" />
-          <link rel="icon" type="image/png" href="static/images/jsdc-logo.png" />
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+          <link rel='stylesheet' type='text/css' href='static/normalize.css' />
+          <link rel='icon' type='image/png' href='static/images/jsdc-logo.png' />
+          <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet' />
           <script
-            type="text/javascript"
-            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          />
+            type='text/javascript'
+            src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'/>
           {this.props.styleElement}
           <body>
             <Main />

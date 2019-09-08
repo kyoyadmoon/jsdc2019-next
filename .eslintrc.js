@@ -13,14 +13,16 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 8
   },
+  settings: {
+    react: { version: 'detect' },
+  },
   rules: {
     "indent": ["error", 2],
     'react/jsx-filename-extension': 0,
     'no-extra-parens': 0,
     'react/jsx-no-bind': 0,
     'no-use-before-define': 0,
-    quotes: 0,
-    'babel/quotes': [1, 'single'],
+    'babel/quotes': [2, 'single'],
     semi: ['ERROR', 'always'],
     'space-before-function-paren': [2, {
       anonymous: 'never',
@@ -44,8 +46,12 @@ module.exports = {
         arraysInArrays: false,
         objectsInArrays: false
       }],
+
+    // react
     'react/display-name': 0,
     'react/prop-types': 0,
+    'jsx-quotes': [2, "prefer-single"],
+    'react/jsx-closing-bracket-location': [2, 'after-props'],
   },
   plugins: [
     'babel',

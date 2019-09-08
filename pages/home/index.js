@@ -5,13 +5,13 @@ export default () => (
   <Container>
     <LogoContainer>
       <InvisibleLogo >
-        <LogoImg src="/static/images/official/jsdcmain-line.png" />
+        <LogoImg src='/static/images/official/jsdcmain-line.png' />
       </InvisibleLogo>
       <FadeOutLogo>
-        <LogoImg src="/static/images/official/jsdcmain-line.png" />
+        <LogoImg src='/static/images/official/jsdcmain-line.png' />
       </FadeOutLogo>
       <FadeInLogo>
-        <LogoImg src="/static/images/official/jsdcmain.png" />
+        <LogoImg src='/static/images/official/jsdcmain.png' />
       </FadeInLogo>
     </LogoContainer>
     <Title>The 8th JavaScript Developer Annual Conference in Taiwan</Title>
