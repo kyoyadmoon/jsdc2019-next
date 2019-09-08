@@ -16,7 +16,7 @@ export default (props) => {
   return (
     <Container>
       <Title>{props.title}</Title>
-      <DividerLine />
+      <DividerLine/>
     </Container>
   );
 };

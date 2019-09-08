@@ -14,7 +14,7 @@ export default function Venue() {
   };
   return (
     <Container>
-      <SegmentPages subPages={subPages} {...segmentHook} />
+      <SegmentPages subPages={subPages} {...segmentHook}/>
     </Container>
   );
 }

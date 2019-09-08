@@ -40,12 +40,12 @@ class Main extends App {
     return (
       <ThemeProvider theme={theme}>
         <Container>
-          <GlobalStyle />
-          <Nav />
+          <GlobalStyle/>
+          <Nav/>
           <PageContainer>
-            <Component {...pageProps} />
+            <Component {...pageProps}/>
           </PageContainer>
-          <Footer />
+          <Footer/>
         </Container>
       </ThemeProvider>
     );

@@ -52,6 +52,12 @@ module.exports = {
     'react/prop-types': 0,
     'jsx-quotes': [2, "prefer-single"],
     'react/jsx-closing-bracket-location': [2, 'after-props'],
+    'react/jsx-tag-spacing': [2, {
+      'closingSlash': 'never',
+      'beforeSelfClosing': 'never',
+      'afterOpening': 'never',
+      'beforeClosing': 'never'
+    }]
   },
   plugins: [
     'babel',

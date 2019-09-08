@@ -27,17 +27,17 @@ class MyDocument extends Document {
     render() {
       return (
         <Html>
-          <Head />
-          <link rel='stylesheet' type='text/css' href='static/normalize.css' />
-          <link rel='icon' type='image/png' href='static/images/jsdc-logo.png' />
-          <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet' />
+          <Head/>
+          <link rel='stylesheet' type='text/css' href='static/normalize.css'/>
+          <link rel='icon' type='image/png' href='static/images/jsdc-logo.png'/>
+          <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet'/>
           <script
             type='text/javascript'
             src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'/>
           {this.props.styleElement}
           <body>
-            <Main />
-            <NextScript />
+            <Main/>
+            <NextScript/>
             {this.renderGoogleTranslateElementScript()}
           </body>
         </Html>

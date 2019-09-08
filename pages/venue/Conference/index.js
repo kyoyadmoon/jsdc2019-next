@@ -17,8 +17,8 @@ const Container = styled.div`
 export default () => {
   return (
     <Container>
-      <Header date={CONFERENCE.date} title={CONFERENCE.title} />
-      <PageTitle title={CONFERENCE.location} />
+      <Header date={CONFERENCE.date} title={CONFERENCE.title}/>
+      <PageTitle title={CONFERENCE.location}/>
 
       <Title>自行開車前往</Title>
       <Description>臺北市松山區敦化南路一段108號 B2F</Description>

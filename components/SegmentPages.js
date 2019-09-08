@@ -22,7 +22,7 @@ export default function SegmentPages({ subPages, activeTarget, setActiveTarget }
       let SubPage = subPages[key];
       return (
         <SubContent key={key} active={activeTarget === key}>
-          <SubPage />
+          <SubPage/>
         </SubContent>
       );
     });

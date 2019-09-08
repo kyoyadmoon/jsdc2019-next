@@ -17,8 +17,8 @@ const Container = styled.div`
 export default () => {
   return (
     <Container>
-      <Header date={WORKSHOP.date} title={WORKSHOP.title} />
-      <PageTitle title={WORKSHOP.location} />
+      <Header date={WORKSHOP.date} title={WORKSHOP.title}/>
+      <PageTitle title={WORKSHOP.location}/>
       <Title>自行開車前往</Title>
       <Description>
         <OrderList>

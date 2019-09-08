@@ -9,4 +9,4 @@ const DividerLine = styled.span`
     margin: 0 auto;
 `;
 
-export default () => <DividerLine />;
+export default () => <DividerLine/>;
