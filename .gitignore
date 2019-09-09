@@ -30,4 +30,7 @@ config/*
 !config/theme.js
 
 # vscode
-/.vscode
+.vscode
+
+# other
+package-lock.json

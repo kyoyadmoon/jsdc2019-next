@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import HyperLink from './Link';
 import { LINKS } from '../constant';
 import Img from './Img';
+import { assetPrefix } from '~/constant/globalConfig';
+
+const linksWithPrefix = links => links.map(l => ({
+  ...l,
+  href: `${assetPrefix}${l.href}`,
+}));
 
 const Nav = () => {
   return (
@@ -10,7 +16,7 @@ const Nav = () => {
         <Img src='/static/images/logo/logo.svg' width='100'/>
       </Logo>
       <LinkList>
-        {LINKS.map((link, i) => (
+        {linksWithPrefix(LINKS).map((link, i) => (
           <HyperLink key={i} href={link.href}>
             {link.name}
           </HyperLink>
