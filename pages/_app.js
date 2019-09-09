@@ -2,7 +2,7 @@ import App, { Container } from 'next/app';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Nav from '~/components/Nav';
 import Footer from '~/components/Footer';
-import theme from '~/config/styledComponentsTheme';
+import theme from '~/config/theme';
 
 const GlobalStyle = createGlobalStyle`
   body {

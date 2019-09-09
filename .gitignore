@@ -27,6 +27,7 @@ yarn-error.log*
 # config
 config/*
 !config/index.js
+!config/theme.js
 
 # vscode
 /.vscode

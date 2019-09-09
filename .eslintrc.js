@@ -40,12 +40,12 @@ module.exports = {
       'error', 'always', {
         arraysInObjects: true,
         objectsInObjects: true
-      }],
+    }],
     'array-bracket-spacing': [
       'error', 'always', {
         arraysInArrays: false,
         objectsInArrays: false
-      }],
+    }],
 
     // react
     'react/display-name': 0,
