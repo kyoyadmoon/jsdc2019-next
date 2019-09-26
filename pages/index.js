@@ -42,7 +42,9 @@ const Container = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  height: 110px;
+  @media ${props => props.theme.deviceSize.laptop} {
+    margin-bottom: 20px;
+  }
 `;
 
 const fadeIn = keyframes`
@@ -108,7 +110,7 @@ const Title = styled.p`
   font-weight: 700;
   margin-top: 0;
   @media ${props => props.theme.deviceSize.laptop} {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 180%;
   }
 `;
