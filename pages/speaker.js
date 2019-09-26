@@ -1,6 +1,3 @@
-export default function Speaker() {
-  return (
-    <div>
-    </div>
-  );
-}
+import SpeakersPage from '~/module/speaker';
+
+export default SpeakersPage;
