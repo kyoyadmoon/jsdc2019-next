@@ -17,7 +17,7 @@ export default {
     dividerLine: '#ececec',
   },
   font: {
-    fontFamily: '\'Open Sans\', sans-serif',
+    fontFamily: '"Microsoft JhengHei", "Open Sans", sans-serif',
     fontSize: '14px',
   },
   deviceSize: {

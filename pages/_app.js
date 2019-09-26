@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const PageContainer = styled.div`
-  min-height: 90vh;
+  min-height: 100vh;
   padding-top: 54px;
 `;
 

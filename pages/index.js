@@ -5,13 +5,13 @@ export default () => (
   <Container>
     <LogoContainer>
       <InvisibleLogo>
-        <LogoImg src='/static/images/official/jsdcmain-line.png' />
+        <LogoImg src='/static/images/official/jsdcmain-line.png'/>
       </InvisibleLogo>
       <FadeOutLogo>
-        <LogoImg src='/static/images/official/jsdcmain-line.png' />
+        <LogoImg src='/static/images/official/jsdcmain-line.png'/>
       </FadeOutLogo>
       <FadeInLogo>
-        <LogoImg src='/static/images/official/jsdcmain.png' />
+        <LogoImg src='/static/images/official/jsdcmain.png'/>
       </FadeInLogo>
     </LogoContainer>
     <Title>The 8th JavaScript Developer Annual Conference in Taiwan</Title>
@@ -20,7 +20,7 @@ export default () => (
     <HighlightSpan>2019/9/28 (六) 技術工作坊：「 JavaScript 新技術的入門與導入」</HighlightSpan>
     <HighlightSpan>2019/10/26 (六) 主年會：「 JavaScript 穩定之後，然後呢？」</HighlightSpan>
 
-    <Division />
+    <Division/>
 
     <DescriptionSpan>JavaScript 近年從 ES6 的出世到前端框架的競逐，帶動了一連串的革命，</DescriptionSpan>
     <DescriptionSpan>也同時在後端、行動裝置，甚至是 IoT，機器學習等領域大放異彩。</DescriptionSpan>
@@ -109,6 +109,7 @@ const Title = styled.p`
   text-size-adjust: 100%;
   font-weight: 700;
   margin-top: 0;
+  margin-bottom: 35px;
   @media ${props => props.theme.deviceSize.laptop} {
     font-size: 1.2rem;
     line-height: 180%;
@@ -135,7 +136,7 @@ const DescriptionSpan = styled.span`
 `;
 
 const Division = styled.div`
-  height: 15px;
+  margin-bottom: 35px;
 `;
 
 const Button = styled.button`
