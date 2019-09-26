@@ -1,3 +1,3 @@
-import Venue from '~/modules/venue/';
+import Venue from '~/module/venue/';
 
 export default Venue;
