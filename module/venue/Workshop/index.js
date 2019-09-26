@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import PageTitle from '~/components/PageTitle';
-import Header from '../shared/Header';
+import SegmentPageHeader from '~/components/SegmentPageHeader';
 import Title from '../shared/Title';
 import Description from '../shared/Description';
 import OrderList from '../shared/OrderList';
@@ -17,8 +16,7 @@ const Container = styled.div`
 export default () => {
   return (
     <Container>
-      <Header date={WORKSHOP.date} title={WORKSHOP.title}/>
-      <PageTitle title={WORKSHOP.location}/>
+      <SegmentPageHeader date={WORKSHOP.date} headerTitle={WORKSHOP.title} pageTitle={WORKSHOP.location}/>
       <Title>自行開車前往</Title>
       <Description>
         <OrderList>
