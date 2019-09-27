@@ -35,7 +35,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 15px;
-  margin-top: 54px;
 `;
 
 const Team = styled.span`

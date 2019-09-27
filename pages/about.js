@@ -3,7 +3,7 @@ import PageTitle from '~/components/PageTitle';
 import Img from '~/components/Img';
 
 const Container = styled.div`
-  padding: 70px 15px;
+  padding: 20px 15px;
 `;
 const Description = styled.p`
   margin: 48px auto;
@@ -28,7 +28,7 @@ const StyledImg = styled(Img)`
 export default () => {
   return (
     <Container>
-      <PageTitle title='ABout us'/>
+      <PageTitle title='About us'/>
       <Description>
         JavaScript 開發者年會 (JavaScript Developer Conference，簡稱 JSDC) 是台灣最大的 JavaScript 年度性技術研討會，旨在提供台灣中高階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。
         <br/>
