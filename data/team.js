@@ -1,26 +1,26 @@
 export default {
   '議程組': [
-    { name:'維元 (Wei)', img: 'weiyuan' },
-    { name:'Zet', img: 'zet' },
-    { name:'Caesar', img: 'logo' },
-    { name:'Simon', img: 'simon' },
+    { name:'維元 (Wei)', img: 'weiyuan.jpg' },
+    { name:'Zet', img: 'zet.jpg' },
+    { name:'Caesar', img: 'logo.jpg' },
+    { name:'Simon', img: 'simon.jpg' },
   ],
   '贊助組': [
-    { name:'Amy', img: 'amy' },
-    { name:'Kevin', img: 'logo' },
-    { name:'Deleav', img: 'logo' },
+    { name:'Amy', img: 'amy.jpg' },
+    { name:'Kevin', img: 'logo.jpg' },
+    { name:'Deleav', img: 'logo.jpg' },
   ],
   '設計組': [
-    { name:'Nozomi', img: 'nozomi' },
-    { name:'Ashu', img: 'ashu' },
-    { name:'Maureen', img: 'maureen' },
-    { name:'ALi', img: 'ali' },
+    { name:'Nozomi', img: 'nozomi.jpg' },
+    { name:'Ashu', img: 'ashu.jpg' },
+    { name:'Maureen', img: 'maureen.jpg' },
+    { name:'ALi', img: 'ali.jpg' },
   ],
   '票務組': [
-    { name:'Amber', img: 'amber' },
+    { name:'Amber', img: 'amber.jpg' },
   ],
   '場務組': [
-    { name:'Horken', img: 'horken' },
-    { name:'小馬', img: 'ma' },
+    { name:'Horken', img: 'horken.jpg' },
+    { name:'小馬', img: 'ma.jpg' },
   ],
 };
