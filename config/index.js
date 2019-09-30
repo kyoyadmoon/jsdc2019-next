@@ -3,7 +3,7 @@ const merge = require('lodash/merge');
 const env = process.env.NODE_ENV || 'development';
 
 const config = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/jsdc2019-next' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
 };
 
 try {

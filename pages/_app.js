@@ -16,7 +16,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const PageContainer = styled.div`
-  min-height: 90vh;
+  min-height: 95vh;
+  padding-top: 100px;
 `;
 
 class Main extends App {
