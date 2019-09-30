@@ -7,7 +7,7 @@ import { assetPrefix } from '~/constant/globalConfig';
 
 const linksWithPrefix = links => links.map(l => ({
   ...l,
-  href: `${assetPrefix}${l.href}`,
+  href: `${l.href}`,
 }));
 
 const Nav = () => {
