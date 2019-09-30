@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import PageTitle from './PageTitle';
 
-function Header(props) {
+export function Header(props) {
   return (
     <Container>
       <Text>{props.date}</Text>
