@@ -97,8 +97,6 @@ const Description = styled.p`
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, .8);
   }
 `;

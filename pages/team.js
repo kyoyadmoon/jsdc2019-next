@@ -56,15 +56,15 @@ const TeamMembers = styled.div`
 const Member = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 15%;
+  width: 15%;
   padding: 25px;
   justify-content: center;
   align-items: center;
   @media ${props => props.theme.deviceSize.laptopL} {
-    max-width: 20%;
+    width: 20%;
   }
   @media ${props => props.theme.deviceSize.tablet} {
-    max-width: 50%;
+    width: 50%;
   }
 `;
 
@@ -75,7 +75,7 @@ const Avatar = styled(Img)`
 `;
 
 const Name = styled.span`
-  padding: 20px;
+  padding: 20px 0px;
   font-size: 14px;
   font-weight: 300;
 `;

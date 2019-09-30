@@ -1,6 +1,3 @@
-export default function Agenda() {
-  return (
-    <div>
-    </div>
-  );
-}
+import AgendaPage from '~/module/agenda';
+
+export default AgendaPage;

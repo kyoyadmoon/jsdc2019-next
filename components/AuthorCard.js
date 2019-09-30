@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Img from '~/components/Img';
 
 export default function AuthorCard(props) {
 
-  const { image, name, company, description, about, github, twitter } = props;
+  const { image, name, company, description, about, github, twitter, facebook } = props;
   return (
     <Container>
       {image &&
@@ -21,6 +21,7 @@ export default function AuthorCard(props) {
           <LinkList>
             {twitter && <IconLink icon={faTwitter} href={twitter}/>}
             {github && <IconLink icon={faGithub} href={github}/>}
+            {facebook && <IconLink icon={faFacebook} href={facebook}/>}
           </LinkList>
         </Header>
         <Bio>
@@ -44,7 +45,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 25%;
-  padding: 10px;
+  padding: 25px 15px 0;
   @media ${props => props.theme.deviceSize.laptopL} {
     max-width: 33.33%;
   }
@@ -70,7 +71,7 @@ const Avatar = styled(Img)`
 `;
 
 const Content = styled.div`
-  background-color: white;
+  background-color: ${props => props.theme.colors.white};
   color: black;
 `;
 
@@ -114,5 +115,13 @@ const Bio = styled.p`
   overflow: auto;
   padding: 0px 20px;
   padding-bottom: 10px;
+  margin: 0px;
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .2);
+  }
 `;
 

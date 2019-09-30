@@ -11,5 +11,6 @@ export default (speakers) =>
       description={description}
       github={links.github}
       twitter={links.twitter}
+      facebook={links.facebook}
       about={abouts}/>);
   });

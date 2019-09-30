@@ -21,7 +21,6 @@ export default function Venue() {
 
 const Container = styled.div`
   flex: 1;
-  padding: 20px 0px;
+  padding: 20px 30px;
   min-height: 90vh;
-  margin: 0px 15px;
 `;
