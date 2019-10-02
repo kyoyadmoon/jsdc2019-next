@@ -25,6 +25,7 @@ const Nav = () => {
             </HyperLink>
           ))}
         </LinkList>
+        <div id='google_translate_element'/>
         <NavButton onClick={() => { setExpandCollapse(!expandCollapse); }}>
           <NavIconBar/>
           <NavIconBar/>
