@@ -16,7 +16,7 @@ const showModal = ({ image, name, agenda }) => {
       image={`/static/images/speaker/${image}`}
       name={name}
       subject={agenda.title}
-      outline={agenda.outline}/>,
+      outline={agenda.outline} />,
     showCloseButton: true,
     showConfirmButton: false,
     showCancelButton: false,
@@ -27,27 +27,32 @@ export default function AgendaRow(props) {
   const { agenda, time } = props;
   const event = agenda.all;
   const agenda101 = agenda['101'];
-  if(agenda101) agenda101.speakerInfo = speakers[agenda101.speaker];
+  if (agenda101) agenda101.speakerInfo = speakers[agenda101.speaker];
   const agenda102 = agenda['102'];
-  if(agenda102)  agenda102.speakerInfo = speakers[agenda102.speaker];
+  if (agenda102) agenda102.speakerInfo = speakers[agenda102.speaker];
 
   return (
     <Container>
       <TimeColumn>{time}</TimeColumn>
       <SubjectColumn>
         {event && <EventColumn>{event.name}</EventColumn>}
-        {agenda101 && <SubjectBox speaker={agenda101.speakerInfo.name} subject={agenda101.name} language={languagesData[agenda101.speakerInfo.agenda.lang]} showModal={showModal(agenda101.speakerInfo)}/>}
-        {agenda102 && <SubjectBox speaker={agenda102.speakerInfo.name} subject={agenda102.name} language={languagesData[agenda102.speakerInfo.agenda.lang]} showModal={showModal(agenda102.speakerInfo)}/>}
+        {agenda101 && <SubjectBox speaker={agenda101.speakerInfo.name} subject={agenda101.name} language={languagesData[agenda101.speakerInfo.agenda.lang]} showModal={showModal(agenda101.speakerInfo)} slide={agenda101.speakerInfo.agenda.slide} />}
+        {agenda102 && <SubjectBox speaker={agenda102.speakerInfo.name} subject={agenda102.name} language={languagesData[agenda102.speakerInfo.agenda.lang]} showModal={showModal(agenda102.speakerInfo)} slide={agenda102.speakerInfo.agenda.slide} />}
       </SubjectColumn>
     </Container>
   );
 }
 
 const SubjectBox = (props) => {
-  const { speaker, subject, language } = props;
+  const { speaker, subject, language, slide } = props;
   return <SubjectContainer>
     <Speaker>{speaker}</Speaker>
-    <LanguageTag>{language}</LanguageTag>
+    <Row>
+      <LanguageTag>{language}</LanguageTag>
+      {slide && <SlideLink target="_blank" href={slide}>
+        <SlideTag>Slide</SlideTag>
+      </SlideLink>}
+    </Row>
     <Subject onClick={props.showModal}>{subject}</Subject>
   </SubjectContainer>;
 };
@@ -89,6 +94,10 @@ const Speaker = styled.span`
   font-family: Oswald, sans-serif;
 `;
 
+const Row = styled.div`
+  display: flex;
+`;
+
 const LanguageTag = styled.div`
   display: flex;
   justify-content: center;
@@ -101,6 +110,21 @@ const LanguageTag = styled.div`
   padding: 3px 7px;
   margin: 10px 0px;
   font-size: 12px;
+`;
+
+const SlideLink = styled.a`
+  text-decoration-line: none;
+`;
+
+
+const SlideTag = styled(LanguageTag)`
+  background-color: #5bc0de;
+  font-size:12px;
+  margin-left: 5px;
+  font-weight: bold;
+  width: auto;
+  color: #fff;
+  text-decoration-line: none;
 `;
 
 const Subject = styled.a`
