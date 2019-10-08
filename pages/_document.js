@@ -15,34 +15,38 @@ class MyDocument extends Document {
     return { ...initialProps, styleElement };
   }
 
-    renderGoogleTranslateElementScript = () => (
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'tw'},
-    'google_translate_element');}`,
-        }}/>
-    );
+  renderGoogleTranslateElementScript = () => (
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'zh-TW',
+              includedLanguages: 'en,zh-CN,ja,zh-TW',
+              layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT,
+              multilanguagePage: true,
+            }, 'google_translate_element')
+          }`,
+      }}/>
+  );
 
-    render() {
-      return (
-        <Html>
-          <Head/>
-          <link rel='stylesheet' type='text/css' href='static/normalize.css'/>
-          <link rel='icon' type='image/png' href='static/images/jsdc-logo.png'/>
-          <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet'/>
-          <script
-            type='text/javascript'
-            src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'/>
-          {this.props.styleElement}
-          <body>
-            <Main/>
-            <NextScript/>
-            {this.renderGoogleTranslateElementScript()}
-          </body>
-        </Html>
-      );
-    }
+  render() {
+    return (
+      <Html>
+        <Head/>
+        <link rel='stylesheet' type='text/css' href='static/normalize.css'/>
+        <link rel='stylesheet' type='text/css' href='static/main.css'/>
+        <link rel='icon' type='image/png' href='static/images/jsdc-logo.png'/>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet'/>
+        {this.props.styleElement}
+        <body>
+          <Main/>
+          <NextScript/>
+          {this.renderGoogleTranslateElementScript()}
+          <script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
+        </body>
+      </Html>
+    );
+  }
 }
 
 export default MyDocument;

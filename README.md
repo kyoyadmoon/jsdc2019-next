@@ -1,11 +1,11 @@
 # Install
 ```bash
 yarn
-npm run dev
+yarn dev
 # http://localhost:3000
 ```
 
 # build static file
 ```bash
-npm run export
+yarn export
 ```
