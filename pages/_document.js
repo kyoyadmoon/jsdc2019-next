@@ -6,6 +6,18 @@ import { ServerStyleSheet } from 'styled-components';
 // ./pages/_document.js
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
+const googleTranslateElementScript = <script
+  dangerouslySetInnerHTML={{
+    __html: `function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'zh-TW',
+          includedLanguages: 'en,zh-CN,ja,zh-TW',
+          layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT,
+          multilanguagePage: true,
+        }, 'google_translate_element')
+      }`,
+  }}/>;
+
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -14,20 +26,6 @@ class MyDocument extends Document {
 
     return { ...initialProps, styleElement };
   }
-
-  renderGoogleTranslateElementScript = () => (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-              pageLanguage: 'zh-TW',
-              includedLanguages: 'en,zh-CN,ja,zh-TW',
-              layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT,
-              multilanguagePage: true,
-            }, 'google_translate_element')
-          }`,
-      }}/>
-  );
 
   render() {
     return (
@@ -41,7 +39,7 @@ class MyDocument extends Document {
         <body>
           <Main/>
           <NextScript/>
-          {this.renderGoogleTranslateElementScript()}
+          {googleTranslateElementScript}
           <script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
         </body>
       </Html>
