@@ -37,12 +37,12 @@ class MyDocument extends Document {
         <link rel='stylesheet' type='text/css' href='static/main.css'/>
         <link rel='icon' type='image/png' href='static/images/jsdc-logo.png'/>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet'/>
-        <script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
         {this.props.styleElement}
         <body>
           <Main/>
           <NextScript/>
           {this.renderGoogleTranslateElementScript()}
+          <script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
         </body>
       </Html>
     );
